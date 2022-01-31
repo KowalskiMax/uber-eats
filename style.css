@@ -42,6 +42,7 @@ body {
 	text-decoration: none;
 	color: #000;
 	transition: .3s ease;
+	outline: none;
 }
 
 .nav_items_login:hover {
@@ -49,7 +50,7 @@ body {
 	color: #fff;
 }
 
-.nav_items_login:active {
+.nav_items_login:focus {
 	box-shadow: 0 0 0 0.2rem rgba(224, 224, 224, 1);
 }
 
@@ -64,3 +65,50 @@ body {
 .nav_basket:hover {
 	background-image: url(pic/basket_green.svg);
 }
+
+.search {
+	margin-top: 3.4375rem; /*55 px*/
+	border-bottom: 1px solid rgba(117, 117, 117, 0.3);
+	position: relative;
+}
+
+.search:after {
+	content:"";
+	display: block;
+	background-color: #57ad56;
+	width: 0%;
+	transition: .5s ease;
+	height: 1px;
+	transform: translateY(1px);
+}
+
+.search:hover:after, .search:focus:after {
+	width: 100%;
+}
+
+.search_input {
+	display: block;
+	width: 100%;
+	border: none;
+	outline: none;
+	opacity: 0.5;
+	line-height: 1.5rem;
+	background: transparent;
+}
+
+/* анимация не работает в поле input */
+/* доделать */
+
+/* .search_input:after { */
+	/* content:""; */
+	/* display: block; */
+	/* background-color: #57ad56; */
+	/* width: 0%; */
+	/* transition: .5s ease; */
+	/* height: 100px; */
+	/* transform: translateY(1px); */
+/* } */
+
+/* .search_input:hover:after, .search_input:focus:after { */
+	/* width: 100%; */
+/* } */
