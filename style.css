@@ -15,6 +15,11 @@ body {
 .header {
 	width: 100%;
 	box-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16);
+	position: sticky;
+	top: 0;
+	background-color: #fff;
+	opacity: 0.95;
+	z-index: 1;
 }
 
 .nav {
@@ -22,7 +27,6 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	height: 4.5rem;
-	position: sticky;
 }
 
 .nav_items {
@@ -112,3 +116,55 @@ body {
 /* .search_input:hover:after, .search_input:focus:after { */
 	/* width: 100%; */
 /* } */
+
+h1 {
+	font-size: 1.375rem; /* 22px */
+	line-height: 2.125rem; /* 34px */
+	font-weight: normal;
+	margin-top: 3.5rem;
+	margin-bottom: 1rem;
+}
+
+.row {
+	justify-content: space-between;
+	align-items: baseline;
+	padding: 0;
+}
+
+/* add animation to a links */
+
+a {
+	text-decoration: none;
+}
+
+.card {
+	padding-bottom: 1rem; /* 20px */
+}
+
+.restaurants_img {
+	/* height: 20rem; */
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.restaurants_img img {
+	width: 100%;
+}
+
+.card div:nth-child(2) {
+	line-height: 1.5rem; /* 24px */
+	color: #1d1d1d;
+	margin-top: 1rem;
+}
+
+.card div:nth-child(3) {
+	font-size: 0.875rem; /* 14px */
+	line-height: 1.3125rem; /* 21px */
+	color: #626262;
+}
+
+.card div:nth-child(4) {
+	font-size: 0.8125rem; /* 13px */
+	line-height: 1.3125rem; /* 21px */
+	color: #1d1d1d;
+}
