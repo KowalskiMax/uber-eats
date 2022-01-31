@@ -1,5 +1,66 @@
+html {
+	font-family: Roboto, sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
 .row {
 	justify-content: space-around;
 	align-items: center;
 	padding: 0.5em;
+}
+
+.header {
+	width: 100%;
+	box-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16);
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 4.5rem;
+	position: sticky;
+}
+
+.nav_items {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav_items_login {
+	border: 1px solid #e0e0e0;
+	border-radius: 2px;
+	background-color: #fff;
+	padding: 0.7125rem 1.2375rem;
+	font-size: 0.8rem;
+	font-weight: 500;
+	display: inline-block;
+	text-decoration: none;
+	color: #000;
+	transition: .3s ease;
+}
+
+.nav_items_login:hover {
+	background-color: #57ad56;
+	color: #fff;
+}
+
+.nav_items_login:active {
+	box-shadow: 0 0 0 0.2rem rgba(224, 224, 224, 1);
+}
+
+
+.nav_basket {
+	margin-left: 1.6875rem;
+	transition: background-image .3s ease;
+	background-image: url(pic/basket.svg);
+	background-repeat: no-repeat;
+}
+
+.nav_basket:hover {
+	background-image: url(pic/basket_green.svg);
 }
