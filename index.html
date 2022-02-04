@@ -2,7 +2,9 @@
 
 <html lang="ru">
 
-<!-- deploy -->
+<!-- https://uber-eats-kowalski.netlify.app -->
+<!-- заменить pngшки на более легкие -->
+
 
 <head>
 	<meta charset="utf-8">
@@ -18,7 +20,8 @@
 </head>
 	
 <body>
-<div class="header">
+
+<header class="header">
 <nav class="nav container">
 	<a href="#"><div class="nav_logo"><img src="pic/logo.svg" alt="logo"></div></a>
 	<div class="nav_items">
@@ -26,7 +29,7 @@
 		<a class="nav_basket" href="#" type="button" role="button"><img src="pic/basket.svg" alt="logo"></a>
 	</div>
 </nav>
-</div>
+</header>
 
 <div class="container">
 	<form class="search" action="" method="get">
@@ -34,7 +37,7 @@
 	</form>
 </div>
 
-<section class="container restaurants">
+<main class="container restaurants">
 	<h1>Рестораны в Санкт-Петербурге</h1>
 	<div class="row">
 
@@ -102,10 +105,140 @@
 		</a></div>
 
 	</div>
-</div>
+</main>
+
+<footer>
+
+	<div class="footer_logo container">
+		<img src="pic/white-logo.svg">
+	</div>
+	
+	<div class="footer_info container">
+		<div class="row">
+		
+			<div class="col-xs-7 col-md-3 col_first">
+				<select class="select" name="language">
+					<option disabled>Русский</option>
+					<option value="HTML">Русский</option>
+					<option value="JavaScript">English</option>
+					<option value="PHP">Українська</option>
+					<option value="PHP">Қазақ</option>
+					<option value="PHP">Qazaq</option>
+				</select>
+				
+				<p class="hashtag">
+					<span class="tag">#</span>UberEats
+				</p>
+				
+				<div class="social">
+					<a href="#"><div class="fb"></div></a>
+					<a href="#"><div class="twitter"></div></a>
+					<a href="#"><div class="instagram"></div></a>
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12 col-md-4 col-md-offset-1 footer_info_col">
+				
+				<a href="#">Об UberEats</a>
+				<a href="#">Станьте партнёром по доставке</a>
+				<a href="#">Станьте парнёром-рестораном</a>
+				
+			</div>
+			
+			<div class="col-xs-12 col-md-4 footer_info_col">
+			
+				<a href="#">Все города</a>
+				<a href="#">Цены</a>
+				<a href="#">Помощь</a>
+				<a href="#">FAQs</a>
+			
+			</div>
+			
+		</div>
+	</div>
+	
+	<div class="mobile container">
+		<a href="#"><div class="apple"></div></a>
+		<a href="#"><div class="google"></div></a>
+	</div>
+	
+	<div class="last container">
+		<div class="row">
+			<div class="col-xs-12 col-md-4">
+				<a>© 2017 Uber Technologies Inc.</a>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<a href="#">Обработка персональных данных</a>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<a href="#">Пользовательское соглашение</a>
+			</div>
+		</div>
+	</div>
+	
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </body>
 
 </html>
-	
+
+<script>
+$('.select').each(function() {
+    const _this = $(this),
+        selectOption = _this.find('option'),
+        selectOptionLength = selectOption.length,
+        selectedOption = selectOption.filter(':selected'),
+        duration = 300; // длительность анимации 
+
+    _this.hide();
+    _this.wrap('<div class="select"></div>');
+    $('<div>', {
+        class: 'new-select',
+        text: _this.children('option:disabled').text()
+    }).insertAfter(_this);
+
+    const selectHead = _this.next('.new-select');
+    $('<div>', {
+        class: 'new-select__list'
+    }).insertAfter(selectHead);
+
+    const selectList = selectHead.next('.new-select__list');
+    for (let i = 1; i < selectOptionLength; i++) {
+        $('<div>', {
+            class: 'new-select__item',
+            html: $('<span>', {
+                text: selectOption.eq(i).text()
+            })
+        })
+        .attr('data-value', selectOption.eq(i).val())
+        .appendTo(selectList);
+    }
+
+    const selectItem = selectList.find('.new-select__item');
+    selectList.slideUp(0);
+    selectHead.on('click', function() {
+        if ( !$(this).hasClass('on') ) {
+            $(this).addClass('on');
+            selectList.slideDown(duration);
+
+            selectItem.on('click', function() {
+                let chooseItem = $(this).data('value');
+
+                $('select').val(chooseItem).attr('selected', 'selected');
+                selectHead.text( $(this).find('span').text() );
+
+                selectList.slideUp(duration);
+                selectHead.removeClass('on');
+            });
+
+        } else {
+            $(this).removeClass('on');
+            selectList.slideUp(duration);
+        }
+    });
+});
+</script>
 	
