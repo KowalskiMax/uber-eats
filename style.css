@@ -420,3 +420,24 @@ footer {
 	color: #fff;
 	font-size: 11px;
 }
+
+.pagetop {
+	position: fixed;
+	bottom: 24px;
+	right: 16px;
+	height: 80px;
+	width: 80px;
+	background-color: #59bd5a;
+	background-image: url(pic/arrow_up.svg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 15px 25px;
+	border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+	.pagetop {
+		height: 64px;
+		width: 64px;
+	}
+}
