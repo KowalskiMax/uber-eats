@@ -172,14 +172,13 @@ a {
 	padding-bottom: 1.25rem; /* 20px */
 }
 
-.restaurants_img {
-	/* height: 20rem; */
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-
 .restaurants_img img {
 	width: 100%;
+	transition: .3s ease;
+}
+
+.restaurants_img img:hover {
+	transform: scale(1.03);
 }
 
 .card div:nth-child(2) {
@@ -433,6 +432,11 @@ footer {
 	background-repeat: no-repeat;
 	background-size: 15px 25px;
 	border-radius: 2px;
+	transition: .3s ease;
+}
+
+.pagetop:hover {
+	transform: scale(1.06);
 }
 
 @media screen and (max-width: 768px) {
