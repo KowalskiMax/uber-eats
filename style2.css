@@ -264,6 +264,10 @@ header .nav {
 .card {
 	display: flex;
 	justify-content: space-between;
+	height: 10rem;
+	box-sizing: border-box;
+	border: 1px solid rgba(117, 117, 117, 0.2);
+	border-radius: 2px;
 }
 
 .card_info {
@@ -296,6 +300,19 @@ header .nav {
 	line-height: 21px;
 	color: #626262;
 	margin-top: 4px;
+}
+
+.card_price {
+	font-size: 15px;
+	line-height: 21px;
+	font-weight: 500;
+	color: #1d1d1d;
+}
+
+.card_img {
+	width: auto;
+	height: 100%;
+	border-radius: 2px;
 }
 
 
