@@ -356,6 +356,7 @@ footer {
 	row-gap: 23px;
 	padding-top: 7px;
 	padding-bottom: 23px;
+	padding-left: 0;
 }
 
 .footer_info_col a {
@@ -367,6 +368,10 @@ footer {
 
 .footer_info_col a:hover {
 	color: #57ad56;
+}
+
+.footer_info .row {
+	margin: 0;
 }
 
 .mobile {
