@@ -401,6 +401,10 @@ footer {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
+.footer_info .row {
+	width: 100%;
+}
+
 @media screen and (max-width: 768px) {
 	.footer_info {
 		padding-bottom: 17px;
@@ -600,6 +604,7 @@ footer {
 }
 
 .last .row {
+	width: 100%;
 	row-gap: 24px;
 }
 
