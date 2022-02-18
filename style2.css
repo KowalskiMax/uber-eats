@@ -94,6 +94,12 @@ header .nav {
 	background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 768px) {
+	.nav_basket {
+		display: none;
+	}
+}
+
 .nav_basket:hover {
 	background-image: url(pic/basket_green.svg);
 }

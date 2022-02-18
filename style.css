@@ -87,6 +87,12 @@ body {
 	background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 768px) {
+	.nav_basket {
+		display: none;
+	}
+}
+
 .nav_basket:hover {
 	background-image: url(pic/basket_green.svg);
 }
@@ -356,7 +362,6 @@ footer {
 	row-gap: 23px;
 	padding-top: 7px;
 	padding-bottom: 23px;
-	padding-left: 0;
 }
 
 .footer_info_col a {
@@ -417,6 +422,7 @@ footer {
 }
 
 .last .row {
+	width: 100%;
 	row-gap: 24px;
 }
 
