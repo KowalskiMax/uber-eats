@@ -373,7 +373,6 @@ header .nav {
 	height: 100%;
 	border-radius: 2px;
 	object-fit: cover;
-	transition: .3s ease;
 }
 
 @media screen and (min-width: 768.1px) and (max-width: 992px) {
@@ -387,11 +386,6 @@ header .nav {
 		width: 33%;
 	}
 }
-
-.card_img:hover {
-	transform: scale(1.03);
-}
-
 
 footer {
 	background-color: #262626;
