@@ -9,3 +9,4 @@ This project is written as a business card. This means that when you click on a 
 All animations are also written in CSS, which lightens the weight of the site. 
 
 Write all suggestions and suggestions in issues! I will be glad to receive feedback!
+https://www.figma.com/file/wpK46byy8FOSse4rlIMmpy/Untitled?node-id=0%3A1
